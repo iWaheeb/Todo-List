@@ -7,6 +7,8 @@ class Operations:
     def add_task(ui):
         try:
             task = ui.input_line.text()
+            if task == "":
+                return
             ui.tasks_list.addItem(task)
             ui.input_line.setText("")
             Operations.save(ui)
